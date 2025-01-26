@@ -19,7 +19,7 @@ android手机:
 
 ## 以下是订阅节点信息
 
-clash节点
+v2ray节点,适用v2rayN和v2rayNG
 
 ~~~
 
@@ -69,6 +69,7 @@ trojan://3763495894587285504@artistic-snapper.goat627.mom:443?sni=artistic-snapp
 
 ~~~
 
+
 ```
-v2rayn
+clash节点
 ```
