@@ -6,7 +6,7 @@
 ### 电报群组 [@freedomchina](@freedomchina)
 ### 反诈app是流氓应用，尽快卸载，最好恢复出厂设置或刷机
 
-## “使用翻墙的设备最好不要外出携带，做好个人隔离保护”
+## “使用翻墙的设备最好不要外出携带，做好个人隔离保护，中国所有应用软件都被监控”
 
 windows电脑:
 [V2rayN https://github.com/2dust/v2rayN/releases](https://github.com/2dust/v2rayN/releases)
