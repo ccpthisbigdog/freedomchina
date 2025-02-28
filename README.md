@@ -10,7 +10,8 @@
 
 ## v2ray订阅链接    
 
-~~~   https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/subdom.txt
+~~~
+ https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/subdom.txt
 
 ~~~
 
