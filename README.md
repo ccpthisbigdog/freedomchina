@@ -8,7 +8,7 @@
 
 ## “使用翻墙的设备最好不要外出携带，做好个人隔离保护，中国所有应用软件都被监控”
 
-## v2ray订阅链接    
+## V2ray订阅链接    
 
 ~~~
  https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/subdom.txt
