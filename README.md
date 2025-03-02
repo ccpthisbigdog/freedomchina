@@ -15,9 +15,8 @@
 ~~~
 
 ## Clash订阅链接    
-
-`https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml`
-
+~~~ https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml
+~~~
 
 windows电脑:
 [V2rayN https://github.com/2dust/v2rayN/releases](https://github.com/2dust/v2rayN/releases)
