@@ -14,7 +14,7 @@
  https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/subdom.txt
 ~~~
 
-## Clash订阅链接 #注意可能多个空行要自行取得
+## Clash订阅链接 #如有多余空行自行去掉
 
 ~~~
 
