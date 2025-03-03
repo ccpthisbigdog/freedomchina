@@ -33,7 +33,6 @@ android手机:
 [clash https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12](https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12)
 
 ## 以下是订阅节点信息，更新于 2025/03/04
-### 如果想要直接复制clash的节点信息，可以通过 https://v1.v2rayse.com/v2ray-clash/ 这里把下面的v2ray节点信息进行转换。
 
 v2ray节点,适用v2rayN和v2rayNG
 
@@ -102,3 +101,4 @@ vmess://eyJhZGQiOiIxMDMuMTQ5LjE4My4xNzgiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwi
 ```
 clash节点
 ```
+### 若想要直接复制clash的节点信息，可以通过 https://v1.v2rayse.com/v2ray-clash/ 这里把上面的v2ray节点信息进行转换。
