@@ -14,7 +14,7 @@
             margin: 0;
             box-sizing: border-box;
             position: relative;
-            overflow: hidden;
+            overflow: hidden; /* 保证特效不超出页面 */
         }
         h1 { text-align: center; margin-top: 0; }
         .btn-container {
@@ -36,6 +36,27 @@
             text-align: center;
         }
         .btn:hover { background-color: #45a049; }
+        .code-box {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            position: relative;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin-bottom: 10px;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .copy-btn:hover { background-color: #45a049; }
         .link-section {
             display: flex;
             justify-content: center;
@@ -78,18 +99,40 @@
 <div class="btn-container">
     <button class="btn" onclick="copyText('https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/subdom.txt')">点击复制• V2ray订阅链接1</button>
     <button class="btn" onclick="copyText('https://www.ccpthisdog.org/freedom/v.txt')">点击复制• V2ray订阅链接2</button>
-    <button class="btn" onclick="copyText('https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml')">点击复制•Clash订阅链接1</button>
+    <button class="btn" onclick="copyText('https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml')">点击复制•Clash订阅链接2</button>
     <button class="btn" onclick="copyText('https://www.ccpthisdog.org/freedom/c.yaml')">点击复制•Clash订阅链接2</button>
 </div>
 
 <h1>节点信息</h1>
-<div id="node-container"></div>
+<div class="code-box" id="node1">
+ss://Y2hhY2hhMjAtaWV0Zi1wb2x5MTMwNTpmOGY3YUN6Y1BLYnNGOHAz@181.119.30.20:990#%E7%BE%8E%E5%9B%BD%28%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29
+vless://e497da22-d020-40fb-a1fa-bc294066a2d2@45.149.12.128:80?path=%2F%3Fed%3D2560&security=&encryption=none&host=pormang.webhost99.workers.dev&type=ws&sni=pormang.webhost99.workers.dev#%E7%BE%8E%E5%9B%BD%28%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29
+vless://53fa8faf-ba4b-4322-9c69-a3e5b1555049@154.83.2.156:8880?path=%2F%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%40AZARBAYJAB1%3Fed%3D2560&security=&encryption=none&host=redw.pooriam.ir&type=ws&sni=redw.pooriam.ir#%E7%BE%8E%E5%9B%BD%28%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29
+vless://e497da22-d020-40fb-a1fa-bc294066a2d2@45.149.12.128:80?path=%2F%3Fed%3D2560%2Ftelegram%40V2ray_Alpha%2F%3Fed%3D2560&security=&encryption=none&host=pormang.webhost99.workers.dev&type=ws&sni=pormang.webhost99.workers.dev#%E7%BE%8E%E5%9B%BD%28%E5%85%8D%E8%B4%B9%E8%8A%82%E7%82%B9%29
+vmess://eyJhZGQiOiIxMDMuMTQ5LjE4My4xNzgiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwiaG9zdCI6IiIsImlkIjoiM2E5MDc5NTYtZjY2OC00ZTZiLWVhMDMtMDk0OWYwYzljMGE1IiwibmV0IjoidGNwIiwicGF0aCI6IiIsInBvcnQiOiI1NDY3NSIsInBzIjoiMTRoayIsInNjeSI6ImF1dG8iLCJzbmkiOiIiLCJ0bHMiOiIiLCJ0eXBlIjoibm9uZSIsInYiOiIyIn0=
+
+
+    <button class="copy-btn" onclick="copyToClipboard('node1')">一键复制</button>
+</div>
+<!--
+<div class="code-box" id="node2">
+vmess://example-node-info-2
+    <button class="copy-btn" onclick="copyToClipboard('node2')">一键复制</button>
+</div>
+
+<div class="code-box" id="node3">
+vmess://example-node-info-3
+    <button class="copy-btn" onclick="copyToClipboard('node3')">一键复制</button>
+</div>
+-->
 
 <div class="link-section">
     <a href="https://www.ccpthisdog.org" target="_blank">主页</a>
     <a href="https://ccpthisdog.org" target="_blank">主页</a>
     <a href="https://github.com/ccpthisbigdog/freedomchina" target="_blank">GitHub</a>
 </div>
+
+
 
 <script>
     function showCopySuccess() {
@@ -112,22 +155,13 @@
 
     function copyToClipboard(elementId) {
         const element = document.getElementById(elementId);
-        const textToCopy = element.innerText.trim();
+        const textToCopy = element.innerText.trim().split('\n')[0].trim();
 
         navigator.clipboard.writeText(textToCopy).then(() => {
             showCopySuccess();
         }).catch(err => {
             console.error('复制失败: ', err);
         });
-    }
-
-    function loadNodeInfo() {
-        fetch('nodes.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('node-container').innerHTML = data;
-            })
-            .catch(error => console.error('节点信息加载失败:', error));
     }
 
     // ====== 气泡特效 ======
@@ -146,9 +180,7 @@
         }, 20000);
     }
 
-    setInterval(createBubble, 1000);  // 每1000ms生成一个气泡
-
-    window.onload = loadNodeInfo;
+    setInterval(createBubble, 500);  // 每500ms生成一个气泡
 </script>
 
 <div id="copy-success-msg" style="
