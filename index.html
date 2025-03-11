@@ -63,6 +63,8 @@
             padding: 15px 0;
             background-color: #f0f0f0;
             border-top: 2px solid #ddd;
+            display: flex;
+            justify-content: space-around; /* 均匀分布 */
         }
         a {
             text-decoration: none;
@@ -70,6 +72,20 @@
             font-weight: bold;
         }
         a:hover { text-decoration: underline; }
+
+        #copy-success-msg {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
@@ -79,7 +95,7 @@
 <div class="btn-container">
     <button class="btn" onclick="copyText('https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/subdom.txt')">点击复制• V2ray订阅链接1</button>
     <button class="btn" onclick="copyText('https://www.ccpthisdog.org/freedom/v.txt')">点击复制• V2ray订阅链接2</button>
-    <button class="btn" onclick="copyText('https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml')">点击复制•Clash订阅链接1</button>
+    <button class="btn" onclick="copyText('https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml')">点击复制•Clash订阅链接2</button>
     <button class="btn" onclick="copyText('https://www.ccpthisdog.org/freedom/c.yaml')">点击复制•Clash订阅链接2</button>
 </div>
 
@@ -102,15 +118,25 @@ vmess://eyJhZGQiOiIxMDMuMTQ5LjE4My4xNzgiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwi
         const fullNodeText = document.getElementById('node1-content').innerText
             .replace('\n...', '');  // 去除"..."，避免只复制前10行
         navigator.clipboard.writeText(fullNodeText).then(() => {
-            alert('复制成功！');
+            showCopySuccess();
         }).catch(err => {
             console.error('复制失败: ', err);
         });
     }
 
+    function showCopySuccess() {
+        const msgBox = document.getElementById('copy-success-msg');
+        msgBox.innerText = '复制成功！';
+        msgBox.style.display = 'block';
+
+        setTimeout(() => {
+            msgBox.style.display = 'none';
+        }, 2000);  // 2秒后自动消失
+    }
+
     function copyText(text) {
         navigator.clipboard.writeText(text).then(() => {
-            alert('复制成功！');
+            showCopySuccess();
         }).catch(err => {
             console.error('复制失败: ', err);
         });
@@ -122,6 +148,8 @@ vmess://eyJhZGQiOiIxMDMuMTQ5LjE4My4xNzgiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwi
     <a href="https://ccpthisdog.org" target="_blank">主页</a>
     <a href="https://github.com/ccpthisbigdog/freedomchina" target="_blank">GitHub</a>
 </div>
+
+<div id="copy-success-msg"></div>
 
 </body>
 </html>
