@@ -14,7 +14,10 @@
             margin: 0;
             box-sizing: border-box;
         }
-        h1 { text-align: center; margin-top: 0; }
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
         .btn-container {
             display: flex;
             flex-direction: column;
@@ -33,7 +36,9 @@
             max-width: 300px;
             text-align: center;
         }
-        .btn:hover { background-color: #45a049; }
+        .btn:hover {
+            background-color: #45a049;
+        }
         .code-box {
             background-color: #f4f4f4;
             border: 1px solid #ddd;
@@ -42,7 +47,8 @@
             white-space: pre-wrap;
             word-wrap: break-word;
             margin-bottom: 10px;
-            max-height: 200px; /* 限制显示10行 */
+            max-height: 200px;
+            /* 限制显示10行 */
             overflow: hidden;
         }
         .copy-btn {
@@ -56,7 +62,9 @@
             cursor: pointer;
             border-radius: 4px;
         }
-        .copy-btn:hover { background-color: #45a049; }
+        .copy-btn:hover {
+            background-color: #45a049;
+        }
         .footer-links {
             text-align: center;
             margin-top: 40px;
@@ -64,14 +72,17 @@
             background-color: #f0f0f0;
             border-top: 2px solid #ddd;
             display: flex;
-            justify-content: space-around; /* 均匀分布 */
+            justify-content: space-around;
+            /* 均匀分布 */
         }
         a {
             text-decoration: none;
             color: #0078FF;
             font-weight: bold;
         }
-        a:hover { text-decoration: underline; }
+        a:hover {
+            text-decoration: underline;
+        }
 
         #copy-success-msg {
             display: none;
@@ -85,6 +96,35 @@
             border-radius: 5px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             z-index: 999;
+        }
+
+        .download-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* 默认两列 */
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .download-btn button {
+            background-color: #007BFF;
+            color: white;
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .download-btn button:hover {
+            background-color: #0056b3;
+        }
+
+        /* 自适应调整：在屏幕较窄时变为单列 */
+@media (max-width: 768px) {
+            .download-container {
+                grid-template-columns: 1fr;
+                /* 小于768px的设备只显示一列 */
+            }
         }
     </style>
 </head>
@@ -191,6 +231,27 @@ vmess://eyJhZGQiOiIxMDMuMTQ5LjE4My4xNzgiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwi
         });
     }
 </script>
+
+<div class="download-container">
+    <div class="download-btn">
+        <button class="btn">下载按钮1</button>
+    </div>
+    <div class="download-btn">
+        <button class="btn">下载按钮2</button>
+    </div>
+    <div class="download-btn">
+        <button class="btn">下载按钮3</button>
+    </div>
+    <div class="download-btn">
+        <button class="btn">下载按钮4</button>
+    </div>
+    <div class="download-btn">
+        <button class="btn">下载按钮5</button>
+    </div>
+    <div class="download-btn">
+        <button class="btn">下载按钮6</button>
+    </div>
+</div>
 
 <div class="footer-links">
     <a href="https://www.ccpthisdog.org" target="_blank">主页</a>
