@@ -14,7 +14,7 @@
             margin: 0;
             box-sizing: border-box;
             position: relative;
-            overflow: hidden; /* 保证特效不超出页面 */
+            overflow: hidden;
         }
         h1 { text-align: center; margin-top: 0; }
         .btn-container {
@@ -36,27 +36,6 @@
             text-align: center;
         }
         .btn:hover { background-color: #45a049; }
-        .code-box {
-            background-color: #f4f4f4;
-            border: 1px solid #ddd;
-            padding: 10px;
-            position: relative;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            margin-bottom: 10px;
-        }
-        .copy-btn {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background-color: #4CAF50;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-        .copy-btn:hover { background-color: #45a049; }
         .link-section {
             display: flex;
             justify-content: center;
@@ -99,15 +78,12 @@
 <div class="btn-container">
     <button class="btn" onclick="copyText('https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/subdom.txt')">点击复制• V2ray订阅链接1</button>
     <button class="btn" onclick="copyText('https://www.ccpthisdog.org/freedom/v.txt')">点击复制• V2ray订阅链接2</button>
-    <button class="btn" onclick="copyText('https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml')">点击复制•Clash订阅链接2</button>
+    <button class="btn" onclick="copyText('https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml')">点击复制•Clash订阅链接1</button>
     <button class="btn" onclick="copyText('https://www.ccpthisdog.org/freedom/c.yaml')">点击复制•Clash订阅链接2</button>
 </div>
 
 <h1>节点信息</h1>
-<div class="code-box" id="node1">
-    <!-- 节点信息将动态加载 -->
-    <button class="copy-btn" onclick="copyToClipboard('node1')">一键复制</button>
-</div>
+<div id="node-container"></div>
 
 <div class="link-section">
     <a href="https://www.ccpthisdog.org" target="_blank">主页</a>
@@ -116,17 +92,6 @@
 </div>
 
 <script>
-    // 动态加载 subdom.txt 文件
-    fetch('subdom.txt')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('node1').innerText = data;
-        })
-        .catch(error => {
-            console.error('加载节点信息失败: ', error);
-            document.getElementById('node1').innerText = '加载节点信息失败，请检查文件路径或网络连接。';
-        });
-
     function showCopySuccess() {
         const msgBox = document.getElementById('copy-success-msg');
         msgBox.innerText = '复制成功！';
@@ -147,13 +112,22 @@
 
     function copyToClipboard(elementId) {
         const element = document.getElementById(elementId);
-        const textToCopy = element.innerText.trim(); // 复制全部内容，而不是仅第一行
+        const textToCopy = element.innerText.trim();
 
         navigator.clipboard.writeText(textToCopy).then(() => {
             showCopySuccess();
         }).catch(err => {
             console.error('复制失败: ', err);
         });
+    }
+
+    function loadNodeInfo() {
+        fetch('nodes.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('node-container').innerHTML = data;
+            })
+            .catch(error => console.error('节点信息加载失败:', error));
     }
 
     // ====== 气泡特效 ======
@@ -172,7 +146,9 @@
         }, 20000);
     }
 
-    setInterval(createBubble, 500);  // 每500ms生成一个气泡
+    setInterval(createBubble, 1000);  // 每1000ms生成一个气泡
+
+    window.onload = loadNodeInfo;
 </script>
 
 <div id="copy-success-msg" style="
