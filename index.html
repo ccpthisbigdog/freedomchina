@@ -186,11 +186,20 @@ vmess://example-node-info-3
 
 
 <script>
+    function showCopySuccess() {
+        const msgBox = document.getElementById('copy-success-msg');
+        msgBox.innerText = '复制成功！';
+        msgBox.style.display = 'block';
+
+        setTimeout(() => {
+            msgBox.style.display = 'none';
+        }, 3000);  // 3秒后自动消失
+    }
+
     function copyText(text) {
         navigator.clipboard.writeText(text).then(() => {
-            alert('复制成功！');
+            showCopySuccess();
         }).catch(err => {
-            alert('复制失败，请手动复制。');
             console.error('复制失败: ', err);
         });
     }
@@ -200,9 +209,8 @@ vmess://example-node-info-3
         const textToCopy = element.innerText.trim().split('\n')[0].trim();
 
         navigator.clipboard.writeText(textToCopy).then(() => {
-            alert('复制成功！');
+            showCopySuccess();
         }).catch(err => {
-            alert('复制失败，请手动复制。');
             console.error('复制失败: ', err);
         });
     }
@@ -211,20 +219,34 @@ vmess://example-node-info-3
     function createBubble() {
         const bubble = document.createElement('div');
         bubble.className = 'bubble';
-        const size = Math.random() * 50 + 10;  // 气泡大小 10px - 60px
+        const size = Math.random() * 50 + 10;
         bubble.style.width = `${size}px`;
         bubble.style.height = `${size}px`;
-        bubble.style.left = `${Math.random() * 100}vw`;  // 随机位置
-        bubble.style.animationDuration = `${Math.random() * 10 + 10}s`;  // 随机上升速度
+        bubble.style.left = `${Math.random() * 100}vw`;
+        bubble.style.animationDuration = `${Math.random() * 10 + 10}s`;
         document.body.appendChild(bubble);
 
         setTimeout(() => {
-            bubble.remove();  // 动画结束后删除气泡
+            bubble.remove();
         }, 20000);
     }
 
     setInterval(createBubble, 500);  // 每500ms生成一个气泡
 </script>
+
+<div id="copy-success-msg" style="
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+"></div>
 
 </body>
 </html>
