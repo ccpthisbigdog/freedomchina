@@ -2,7 +2,7 @@
 # 会翻墙 爱翻墙 常翻墙 - 没有墙
 ## 想想你为什么需要翻墙
 ## 想想共产党为什么不让中国人使用chatgpt、google、twitter、whatsapp。
-### 订阅每天更新(暂不能使用) www.ccpthisdog.org/freedom.htmla
+### 订阅节点发布网站 https://www.ccpthisdog.org/freedom.html
 https://ccpthisbigdog.github.io/freedomchina/
 ### [twitter  https://x.com/lisaytoyou](https://x.com/lisaytoyou)
 ### 电报群组 [@freedomchina](@freedomchina)
