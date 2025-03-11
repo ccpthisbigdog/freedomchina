@@ -13,8 +13,6 @@
             padding: 20px;
             margin: 0;
             box-sizing: border-box;
-            position: relative;
-            overflow: hidden;
         }
         h1 { text-align: center; margin-top: 0; }
         .btn-container {
@@ -88,49 +86,6 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             z-index: 999;
         }
-
-        /* 气泡特效 */
-        .bubble {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            animation: bubble-animation 10s infinite;
-        }
-
-        @keyframes bubble-animation {
-            0% {
-                transform: translateY(100vh) scale(0.5);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(-10vh) scale(1.2);
-                opacity: 0;
-            }
-        }
-
-        /* 飘动文字 */
-        .floating-text {
-            position: absolute;
-            font-size: 24px;
-            color: rgba(255, 255, 255, 0.8);
-            font-weight: bold;
-            animation: floating-animation 5s infinite;
-        }
-
-        @keyframes floating-animation {
-            0% {
-                transform: translateX(0) translateY(0);
-            }
-            50% {
-                transform: translateX(50px) translateY(-50px);
-            }
-            100% {
-                transform: translateX(0) translateY(0);
-            }
-        }
-
     </style>
 </head>
 <body>
@@ -140,7 +95,7 @@
 <div class="btn-container">
     <button class="btn" onclick="copyText('https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/subdom.txt')">点击复制• V2ray订阅链接1</button>
     <button class="btn" onclick="copyText('https://www.ccpthisdog.org/freedom/v.txt')">点击复制• V2ray订阅链接2</button>
-    <button class="btn" onclick="copyText('https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml')">点击复制•Clash订阅链接2</button>
+    <button class="btn" onclick="copyText('https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml')">点击复制•Clash订阅链接1</button>
     <button class="btn" onclick="copyText('https://www.ccpthisdog.org/freedom/c.yaml')">点击复制•Clash订阅链接2</button>
 </div>
 
@@ -158,39 +113,6 @@ vmess://eyJhZGQiOiIxMDMuMTQ5LjE4My4xNzgiLCJhaWQiOiIwIiwiYWxwbiI6IiIsImZwIjoiIiwi
 </div>
 
 <script>
-    // 创建气泡
-    function createBubbles() {
-        setInterval(() => {
-            const bubble = document.createElement('div');
-            bubble.classList.add('bubble');
-            bubble.style.left = `${Math.random() * 100}%`;  // 随机左右位置
-            bubble.style.animationDuration = `${Math.random() * 5 + 5}s`; // 随机动画速度
-            document.body.appendChild(bubble);
-            setTimeout(() => {
-                bubble.remove(); // 删除气泡
-            }, 10000);  // 气泡生命周期10秒
-        }, 300);  // 每300ms生成一个气泡
-    }
-
-    // 飘动文字
-    function createFloatingText() {
-        const textArray = ['freedom', '自由'];
-        textArray.forEach((text) => {
-            const div = document.createElement('div');
-            div.classList.add('floating-text');
-            div.innerText = text;
-            div.style.left = `${Math.random() * 100}%`; // 随机左右位置
-            div.style.top = `${Math.random() * 100}%`; // 随机上下位置
-            document.body.appendChild(div);
-        });
-    }
-
-    // 初始化
-    window.onload = () => {
-        createBubbles();
-        createFloatingText();
-    }
-
     // 点击按钮时复制全部节点信息
     function copyAllNodes() {
         const fullNodeText = document.getElementById('node1-content').innerText
