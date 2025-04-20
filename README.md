@@ -34,7 +34,7 @@ android手机:
 
 [clash https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12](https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12)
 
-## 以下是订阅节点信息，更新于 2025/04/20
+## 以下是订阅节点信息，更新于 2025/04/21
 
 v2ray节点,适用v2rayN和v2rayNG
 
