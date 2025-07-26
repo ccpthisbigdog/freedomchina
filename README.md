@@ -23,18 +23,18 @@ https://ccpthisbigdog.github.io/freedomchina/
 https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml
 ~~~
 
-windows电脑:
+Windows电脑:
 [V2rayN https://github.com/2dust/v2rayN/releases](https://github.com/2dust/v2rayN/releases)
 
-[clash 
+[Clash 
 https://web.archive.org/web/20231030023222/https://github.com/Fndroid/clash_for_windows_pkg/releases](https://web.archive.org/web/20231030023222/https://github.com/Fndroid/clash_for_windows_pkg/releases)
 
-android手机:
+Android手机:
 [V2rayNG https://github.com/2dust/v2rayNG/releases](https://github.com/2dust/v2rayNG/releases)
 
-[clash https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12](https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12)
+[Clash https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12](https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12)
 
-## 以下是订阅节点信息，更新于2025-07-27 07:01
+## 以下是订阅节点信息，更新于2025-07-27 07:08
 
 v2ray节点,适用v2rayN和v2rayNG
 
