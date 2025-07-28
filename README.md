@@ -32,9 +32,10 @@ https://web.archive.org/web/20231030023222/https://github.com/Fndroid/clash_for_
 Android手机:
 [V2rayNG https://github.com/2dust/v2rayNG/releases](https://github.com/2dust/v2rayNG/releases)
 
+[ClashMetaForAndroid](https://github.com/MetaCubeX/ClashMetaForAndroid/releases)
 [Clash https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12](https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12)
 
-## 以下是订阅节点信息，更新于2025-07-29 06:36
+## 以下是订阅节点信息，更新于2025-07-29 06:40
 
 v2ray节点,适用v2rayN和v2rayNG
 
