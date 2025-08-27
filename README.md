@@ -16,32 +16,33 @@ https://ccpthisbigdog.github.io/freedomchina/
  https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/subdom.txt
 ~~~
 
-## Clash订阅链接 #如有多余空行自行去掉
+## Clash订阅链接 #如有多余空行自行去掉  
 
 ~~~
-
 https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml
 ~~~
 
-Windows电脑/Linux/Macos:
-[V2rayN https://github.com/2dust/v2rayN/releases](https://github.com/2dust/v2rayN/releases)
-[Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev/releases)  
+Windows电脑/Linux/Macos:  
+
+🐦🪶 [V2rayN https://github.com/2dust/v2rayN/releases](https://github.com/2dust/v2rayN/releases)  
+
+🐬🐋  [Clash Verge Rev](https://github.com/clash-verge-rev/clash-verge-rev/releases)  
 
 [Clash 
 https://web.archive.org/web/20231030023222/https://github.com/Fndroid/clash_for_windows_pkg/releases](https://web.archive.org/web/20231030023222/https://github.com/Fndroid/clash_for_windows_pkg/releases)
 
 [sing-box支持电脑手机](https://github.com/SagerNet/sing-box/releases)  
-[sing-box支持电脑手机](https://github.com/SagerNet/sing-box/releases)  
+🐎🐿️  [sing-box支持电脑手机](https://github.com/SagerNet/sing-box/releases)  
 
 Android手机:
-[V2rayNG https://github.com/2dust/v2rayNG/releases](https://github.com/2dust/v2rayNG/releases)
-[Clash Meta for Android](https://github.com/MetaCubeX/ClashMetaForAndroid/releases)  
+🍐🥥  [V2rayNG https://github.com/2dust/v2rayNG/releases](https://github.com/2dust/v2rayNG/releases)  
 
-[ClashMetaForAndroid](https://github.com/MetaCubeX/ClashMetaForAndroid/releases)
+🌭🍤 [Clash Meta for Android](https://github.com/MetaCubeX/ClashMetaForAndroid/releases)  
+
 
 [Clash https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12](https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12)
 
-## 以下是订阅节点信息，更新于2025-08-27 10:13
+## 以下是订阅节点信息，更新于2025-08-27 12:13
 
 v2ray节点,适用v2rayN和v2rayNG
 
