@@ -16,7 +16,7 @@ https://ccpthisbigdog.github.io/freedomchina/
  https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/subdom.txt
 ~~~
 
-## Clash订阅链接 #如有多余空行自行去掉  
+## Clash订阅链接  
 
 ~~~
 https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml
@@ -34,7 +34,7 @@ https://web.archive.org/web/20231030023222/https://github.com/Fndroid/clash_for_
 [sing-box支持电脑手机](https://github.com/SagerNet/sing-box/releases)  
 🐎🐿️  [sing-box支持电脑手机](https://github.com/SagerNet/sing-box/releases)  
 
-Android手机:
+Android手机:  
 🍐🥥  [V2rayNG https://github.com/2dust/v2rayNG/releases](https://github.com/2dust/v2rayNG/releases)  
 
 🌭🍤 [Clash Meta for Android](https://github.com/MetaCubeX/ClashMetaForAndroid/releases)  
@@ -42,7 +42,7 @@ Android手机:
 
 [Clash https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12](https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12)
 
-## 以下是订阅节点信息，更新于2025-08-27 12:13
+## 以下是订阅节点信息，更新于2025-08-27 12:14
 
 v2ray节点,适用v2rayN和v2rayNG
 
