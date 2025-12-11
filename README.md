@@ -22,7 +22,7 @@ https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/sub
 https://cdn.jsdelivr.net/gh/ccpthisbigdog/freedomchina/refs/heads/main/subdom.txt
 ~~~ 
  
-## Clash订阅链接  
+## Clash订阅链接  (推荐)
 
 ~~~
 https://raw.githubusercontent.com/ccpthisbigdog/freedomchina/refs/heads/main/clab.yaml
@@ -48,7 +48,7 @@ Android手机:
 
 [Clash https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12](https://web.archive.org/web/20230703100711/https://github.com/Kr328/ClashForAndroid/releases/tag/v2.5.12)
 
-## 以下是订阅节点信息，更新于2025-12-11 15:13
+## 以下是订阅节点信息，更新于2025-12-11 20:12
 
 v2ray节点,适用v2rayN和v2rayNG
 
