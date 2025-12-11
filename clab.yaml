@@ -3,50 +3,62 @@ socks-port: 7891
 allow-lan: true
 mode: Rule
 log-level: info
+external-controller: :9090
+dns:
+  enable: true
+  nameserver:
+  - 119.29.29.29
+  - 223.5.5.5
+  fallback:
+  - 8.8.8.8
+  - 8.8.4.4
+  - 1.1.1.1
+  - tls://1.0.0.1:853
+  - tls://dns.google:853
 proxies:
-- name: 美国(免费节点)
+- name: A
   type: ss
   server: arxfw2b78fi2q9hzylhn.freesocks.work
   port: 443
   cipher: chacha20-ietf-poly1305
   password: Nk9asglDzHzjktVzTkvhaA
-- name: 德国(免费节点)
+- name: B
   type: ss
   server: 45.87.175.199
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: 4a2rfixophdjffa8KVA4Aa
-- name: 美国(免费节点)#2
+- name: C
   type: ss
   server: 181.119.30.20
   port: 990
   cipher: chacha20-ietf-poly1305
   password: f8f7aCzcPKbsF8p3
-- name: 德国(免费节点)#2
+- name: D
   type: ss
   server: beesyar.org
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: 4a2rfixophdjffa8KVA4Aa
-- name: 0|--7
+- name: E
   type: ss
   server: 45.87.175.188
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: 1RWwXhwfAB5gAEozU4G2Pg
-- name: 0|--9
+- name: F
   type: ss
   server: 45.87.175.188
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: 4a2rfixophdjffa8KVA4Aa
-- name: 0|--11
+- name: G
   type: ss
   server: 45.87.175.188
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: cvII85TrW6n0OGyfpHVS1u
-- name: 0|--39
+- name: H
   type: vmess
   server: irvideo.cfd
   port: 443
@@ -59,7 +71,7 @@ proxies:
     path: /linkws
     headers:
       Host: irvideo.cfd
-- name: 13hk
+- name: I
   type: vmess
   server: 103.149.183.178
   port: 54675
@@ -68,7 +80,7 @@ proxies:
   cipher: auto
   tls: false
   network: tcp
-- name: 14hk
+- name: J
   type: vmess
   server: 103.149.183.178
   port: 54675
@@ -77,39 +89,34 @@ proxies:
   cipher: auto
   tls: false
   network: tcp
-- name: 🇺🇸 美国|@ripaojiedian
+- name: K
   type: trojan
   server: 91.193.58.0
   port: 443
   password: trojan
   sni: ''
-- name: 美国|@ripaojiedian
+- name: L
   type: trojan
   server: 91.193.58.0
   port: 443
   password: trojan
   sni: ''
 proxy-groups:
-- name: 🚀 节点选择
+- name: 手动切换
   type: select
   proxies:
-  - 美国(免费节点)
-  - 德国(免费节点)
-  - 美国(免费节点)#2
-  - 德国(免费节点)#2
-  - 0|--7
-  - 0|--9
-  - 0|--11
-  - 0|--39
-  - 13hk
-  - 14hk
-  - 🇺🇸 美国|@ripaojiedian
-  - 美国|@ripaojiedian
+  - A
+  - B
+  - C
+  - D
+  - E
+  - F
+  - G
+  - H
+  - I
+  - J
+  - K
+  - L
 rules:
-- DOMAIN-SUFFIX,local,DIRECT
-- DOMAIN-SUFFIX,cn,DIRECT
-- DOMAIN-SUFFIX,baidu.com,DIRECT
-- DOMAIN-SUFFIX,google.com,🚀 节点选择
-- DOMAIN-KEYWORD,ads,DIRECT
-- GEOIP,CN,DIRECT
-- MATCH,🚀 节点选择
+- MATCH,手动切换
+共匪早日灭亡，我们没有墙，会民主自由
